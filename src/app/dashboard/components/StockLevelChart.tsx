@@ -169,7 +169,7 @@ const StockLevelChart = () => {
         </div>
         <div className="flex-auto p-4">
           <div>
-            <canvas ref={chartRef}></canvas>
+            <canvas style={{ height: '230px' }} ref={chartRef}></canvas>
           </div>
         </div>
       </div>

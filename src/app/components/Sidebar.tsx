@@ -81,12 +81,6 @@ const Sidebar: FC = () => {
             icon="fa-solid fa-cash-register"
           />
           <SidebarItem
-            text="Reports"
-            color="text-cyan-500"
-            to="/dashboard/reports"
-            icon="fa-solid fa-chart-simple"
-          />
-          <SidebarItem
             text="Suppliers"
             color="text-red-600"
             to="/dashboard/suppliers"

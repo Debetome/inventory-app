@@ -37,6 +37,21 @@ const OrderItem: FC<OrderItemProps> = ({ item }) => {
       >
         {item.status}
       </td>
+      <td className="px-6 py-4 whitespace-nowrap text-right text-lg font-medium">
+        <a
+          href="#"
+          className="text-indigo-600 hover:text-indigo-900 dark:text-blue-400 dark:hover:text-blue-200"
+        >
+          <i className="fa-solid fa-pen-to-square"></i>
+        </a>
+        <span className="mx-2 text-gray-300 dark:text-white">|</span>
+        <a
+          href="#"
+          className="text-red-600 hover:text-red-900 dark:text-red-400 dark:hover:text-red-200"
+        >
+          <i className="fa-solid fa-trash"></i>
+        </a>
+      </td>
     </tr>
   )
 }
