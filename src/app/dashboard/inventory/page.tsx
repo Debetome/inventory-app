@@ -3,8 +3,8 @@
 import React, { useState } from 'react'
 import { NextPage } from 'next'
 
-import InventoryList from './InventoryList'
-import SupplierManagement from './SupplierManagement'
+import InventoryList from './components/InventoryList'
+import SupplierManagement from './components/SupplierManagement'
 
 import {
   dummyInventoryItems,

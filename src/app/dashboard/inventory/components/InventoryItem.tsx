@@ -26,7 +26,10 @@ const InventoryItem: FC<InventoryItemProps> = ({ item }) => {
       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-slate-400">
         {item.quantity}
       </td>
-      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-slate-400">
+      <td
+        className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-slate-400 font-semibold"
+        style={{ color: '#26A834' }}
+      >
         ${item.price.toFixed(2)}
       </td>
       <td className="px-6 py-4 whitespace-nowrap">

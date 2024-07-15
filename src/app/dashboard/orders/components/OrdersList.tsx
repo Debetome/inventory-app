@@ -1,26 +1,23 @@
-'use client'
+import React, { FC } from 'react'
 
-import React, { FC, useState } from 'react'
+import OrderItem from './OrderItem'
+import { Order as OrderType } from '../types'
 
-import { InventoryItem as InventoryItemType } from './types'
-import InventoryItem from './InventoryItem'
-
-interface InventoryListProps {
-  items: InventoryItemType[]
+interface OrdersListProps {
+  items: OrderType[]
 }
 
-// Component definition
-const InventoryList: FC<InventoryListProps> = ({ items }) => {
+const OrdersList: FC<OrdersListProps> = ({ items }) => {
   return (
     <div className="flex flex-wrap m-4 mb-3" style={{ height: '500px' }}>
       <div className="w-full mb-8 px-4" style={{ height: '100%' }}>
         <div
-          className="relative flex flex-col min-w-0 mb-6 break-words bg-white rounded-2xl shadow-xl dark:bg-slate-850 dark:shadow-dark-xl shadow-lg overflow-auto"
+          className="relative flex flex-col min-w-0 mb-6 break-words bg-white rounded-2xl shadow-xl dark:bg-slate-850 dark:shadow-dark-xl shadow-lg"
           style={{ height: '100%' }}
         >
           <div className="relative flex flex-row justify-between p-6 pb-0 mb-0 border-b border-solid rounded-t-lg border-gray-200 dark:border-white/40">
             <h6 className="text-xl font-bold text-gray-800 dark:text-white">
-              Inventory Items
+              Orders
             </h6>
             <button
               className="absolute top-0 right-0 mr-2 mt-2 bg-blue-500 text-white rounded-full"
@@ -43,25 +40,19 @@ const InventoryList: FC<InventoryListProps> = ({ items }) => {
                       scope="col"
                       className="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
-                      Name
+                      Order Number
                     </th>
                     <th
                       scope="col"
                       className="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
-                      Category
+                      Client Id
                     </th>
                     <th
                       scope="col"
                       className="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
-                      Quantity
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
-                    >
-                      Price
+                      Total Amount
                     </th>
                     <th
                       scope="col"
@@ -76,7 +67,7 @@ const InventoryList: FC<InventoryListProps> = ({ items }) => {
                 </thead>
                 <tbody className="divide-y divide-gray-200 dark:divide-white/40">
                   {items.map((item) => (
-                    <InventoryItem key={item.id} item={item} />
+                    <OrderItem key={item.id} item={item} />
                   ))}
                 </tbody>
               </table>
@@ -88,4 +79,4 @@ const InventoryList: FC<InventoryListProps> = ({ items }) => {
   )
 }
 
-export default InventoryList
+export default OrdersList

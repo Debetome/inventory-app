@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { InventoryItem, Supplier } from './types'
+import { InventoryItem, Supplier } from '../types'
 
 interface SupplierManagementProps {
   invItems: InventoryItem[]

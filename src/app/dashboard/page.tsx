@@ -1,14 +1,14 @@
 import React from 'react'
 import { NextPage } from 'next'
 
-import DashboardCard from './DashboardCard'
-import StockLevelChart from './StockLevelChart'
-import SalesChart from './SalesChart'
+import DashboardCard from './components/DashboardCard'
+import StockLevelChart from './components/StockLevelChart'
+import SalesChart from './components/SalesChart'
 
-import OrderStatus from './OrderStatus'
-import LowStockAlerts from './LowStockAlerts'
-import SupplierPerformance from './SupplierPerformance'
-import InventoryValue from './InventoryValue'
+import OrderStatus from './components/OrderStatus'
+import LowStockAlerts from './components/LowStockAlerts'
+import SupplierPerformance from './components/SupplierPerformance'
+import InventoryValue from './components/InventoryValue'
 
 const Dashboard: NextPage = () => {
   return (
