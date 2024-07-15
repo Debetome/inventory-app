@@ -11,14 +11,20 @@ const SupplierManagement: FC<SupplierManagementProps> = ({
   suppliers,
 }) => {
   return (
-    <div className="flex flex-wrap -mx-8">
-      <div className="flex-none w-full max-w-full px-3">
-        <div className="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+    <div className="flex flex-wrap m-4 mb-3" style={{ height: '400px' }}>
+      <div
+        className="flex-none w-full max-w-full px-3"
+        style={{ height: '100%' }}
+      >
+        <div
+          className="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-xl dark:bg-slate-850 dark:shadow-dark-xl shadow-lg rounded-2xl bg-clip-border overflow-auto"
+          style={{ height: '100%' }}
+        >
           <div className="p-6 pb-0 mb-0 border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
             <h6 className="dark:text-white">Supplier Management</h6>
           </div>
-          <div className="flex-auto px-0 pt-0 pb-2">
-            <div className="p-0 overflow-x-auto">
+          <div className="flex-auto px-0 pt-0 pb-2" style={{ height: '100%' }}>
+            <div className="p-0 overflow-auto" style={{ height: '100%' }}>
               <table className="items-center justify-center w-full mb-0 align-top border-collapse dark:border-white/40 text-slate-500">
                 <thead className="align-bottom">
                   <tr>
@@ -45,7 +51,10 @@ const SupplierManagement: FC<SupplierManagementProps> = ({
                             <h6 className="mb-0 text-sm leading-normal dark:text-white">
                               {item.name}
                             </h6>
-                            <p className="text-xs text-gray-500">
+                            <p
+                              className="text-xs text-gray-500 overflow-hidden"
+                              style={{ maxWidth: '280px' }}
+                            >
                               {item.description}
                             </p>
                           </div>

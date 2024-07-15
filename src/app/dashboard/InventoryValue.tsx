@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 const InventoryValue: FC = () => {
   return (
     <div className="w-full max-w-full px-3 mt-5 lg:w-5/12 lg:flex-none">
-      <div className="border-black/12.5 shadow-xl dark:bg-slate-850 dark:shadow-dark-xl relative flex min-w-0 flex-col break-words rounded-2xl border-0 border-solid bg-white bg-clip-border">
+      <div className="border-black/12.5 shadow-xl dark:bg-slate-850 dark:shadow-dark-xl relative flex min-w-0 flex-col break-words rounded-2xl border-0 border-solid bg-white bg-clip-border shadow-lg">
         <div className="p-4 pb-0 rounded-t-4">
           <h6 className="mb-0 dark:text-white">Inventory Overview</h6>
         </div>

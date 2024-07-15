@@ -46,7 +46,54 @@ export const dummyInventoryItems = [
     created_at: new Date('2023-02-28'),
     updated_at: new Date('2023-07-10'),
   },
-  // Add more dummy data as needed
+  {
+    id: 3,
+    name: 'Gadget C',
+    description:
+      'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+    category: {
+      id: 2,
+      name: 'Category B',
+      description: 'Category for Gadget B',
+    },
+    quantity: 20,
+    price: 75.75,
+    status: 'Low Stock',
+    supplier: {
+      id: 2,
+      name: 'Supplier Y',
+      contact_name: 'Jane Smith',
+      email: 'jane.smith@suppliery.com',
+      phone: '987-654-3210',
+      address: '456 Supplier Ave, Suppliertown',
+    },
+    created_at: new Date('2023-02-28'),
+    updated_at: new Date('2023-07-10'),
+  },
+  {
+    id: 4,
+    name: 'Widget D',
+    description:
+      'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+    category: {
+      id: 2,
+      name: 'Category B',
+      description: 'Category for Gadget B',
+    },
+    quantity: 20,
+    price: 35.75,
+    status: 'Low Stock',
+    supplier: {
+      id: 2,
+      name: 'Supplier Y',
+      contact_name: 'Jane Smith',
+      email: 'jane.smith@suppliery.com',
+      phone: '987-654-3210',
+      address: '456 Supplier Ave, Suppliertown',
+    },
+    created_at: new Date('2023-02-28'),
+    updated_at: new Date('2023-07-10'),
+  },
 ]
 
 export const dummySuppliers = [

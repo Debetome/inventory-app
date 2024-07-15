@@ -16,7 +16,7 @@ const Dashboard: NextPage = () => {
       <div className="w-full px-6 py-6 mx-auto">
         <div className="flex flex-wrap -mx-3">
           <DashboardCard
-            title="Total Inventory Items"
+            title="Total Items"
             number={50}
             percentage={20}
             bgStyle="inline-block w-12 h-12 text-center rounded-circle bg-gradient-to-tl from-blue-500 to-violet-500"

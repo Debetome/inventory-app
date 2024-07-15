@@ -1,14 +1,15 @@
 import React, { FC } from 'react'
-import Image from 'next/image';
-import Link from "next/link";
+import Image from 'next/image'
+import Link from 'next/link'
 
 interface SidebarItemProps {
-  text: string;
-  color: string;
-  to: string;
+  text: string
+  color: string
+  icon: string
+  to: string
 }
 
-const SidebarItem: FC<SidebarItemProps> = ({ text, color, to }) => {
+const SidebarItem: FC<SidebarItemProps> = ({ text, color, icon, to }) => {
   return (
     <li className="mt-0.5 w-full">
       <Link
@@ -17,7 +18,7 @@ const SidebarItem: FC<SidebarItemProps> = ({ text, color, to }) => {
       >
         <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
           <i
-            className={`relative top-0 text-sm leading-normal ${color} ni ni-calendar-grid-58`}
+            className={`relative top-0 text-sm leading-normal ${color} ${icon}`}
           ></i>
         </div>
         <span className="ml-1 duration-300 opacity-100 pointer-events-none ease">
@@ -31,14 +32,11 @@ const SidebarItem: FC<SidebarItemProps> = ({ text, color, to }) => {
 const Sidebar: FC = () => {
   return (
     <aside
-      className="fixed inset-y-0 flex-wrap items-center justify-between block w-full p-0 my-4 overflow-y-auto antialiased transition-transform duration-200 -translate-x-full bg-white border-0 shadow-xl dark:shadow-none dark:bg-slate-850 max-w-64 ease-nav-brand z-990 xl:ml-6 rounded-2xl xl:left-0 xl:translate-x-0"
+      className="fixed inset-y-0 flex-wrap items-center justify-between block w-full p-0 my-4 overflow-y-auto antialiased transition-transform duration-200 -translate-x-full bg-white border-0 shadow-xl dark:shadow-none dark:bg-slate-850 max-w-64 ease-nav-brand z-990 xl:ml-6 rounded-2xl xl:left-0 xl:translate-x-0 shadow-lg"
       aria-expanded="false"
     >
       <div className="h-19">
-        <i
-          className="absolute top-0 right-0 p-4 opacity-50 cursor-pointer fas fa-times dark:text-white text-slate-400 xl:hidden"
-          sidenav-close
-        ></i>
+        <i className="absolute top-0 right-0 p-4 opacity-50 cursor-pointer fas fa-times dark:text-white text-slate-400 xl:hidden"></i>
         <a
           className="block px-8 py-6 m-0 text-sm whitespace-nowrap dark:text-white text-slate-700"
           href="https://demos.creative-tim.com/argon-dashboard-tailwind/pages/dashboard.html"
@@ -64,12 +62,42 @@ const Sidebar: FC = () => {
 
       <div className="items-center block w-auto h-full overflow-auto grow basis-full">
         <ul className="flex flex-col pl-0 mb-0 h-full">
-          <SidebarItem text="Dashboard" color="text-slate-700" to="/dashboard"/>
-          <SidebarItem text="Inventory" color="text-orange-500" to="/dashboard/inventory"/>
-          <SidebarItem text="Orders" color="text-emerald-500" to="/dashboard/orders"/>
-          <SidebarItem text="Reports" color="text-cyan-500" to="/dashboard/reports"/>
-          <SidebarItem text="Suppliers" color="text-red-600" to="/dashboard/suppliers"/>
-          <SidebarItem text="Users" color="text-green-500" to="/dashboard/users"/>
+          <SidebarItem
+            text="Dashboard"
+            color="text-slate-700"
+            to="/dashboard"
+            icon="fa-solid fa-gauge"
+          />
+          <SidebarItem
+            text="Inventory"
+            color="text-orange-500"
+            to="/dashboard/inventory"
+            icon="fa-solid fa-box"
+          />
+          <SidebarItem
+            text="Orders"
+            color="text-emerald-500"
+            to="/dashboard/orders"
+            icon="fa-solid fa-cash-register"
+          />
+          <SidebarItem
+            text="Reports"
+            color="text-cyan-500"
+            to="/dashboard/reports"
+            icon="fa-solid fa-chart-simple"
+          />
+          <SidebarItem
+            text="Suppliers"
+            color="text-red-600"
+            to="/dashboard/suppliers"
+            icon="fa-solid fa-truck"
+          />
+          <SidebarItem
+            text="Users"
+            color="text-green-500"
+            to="/dashboard/users"
+            icon="fa-solid fa-user"
+          />
 
           <li className="w-full mt-4">
             <h6 className="pl-6 ml-2 text-xs font-bold leading-tight uppercase dark:text-white opacity-60">
@@ -119,7 +147,7 @@ const Sidebar: FC = () => {
             </a>
           </li>
         </ul>
-      </div>       
+      </div>
     </aside>
   )
 }
